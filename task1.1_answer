@@ -102,3 +102,216 @@ index a99f346..3b17b7b 100644
 
 damager@damager-N56VB ~/myrepo $ git rm fileB
 </div>
+
+damager@damager-N56VB ~/myrepo $ git add fileA task1.1_answer
+
+damager@damager-N56VB ~/myrepo $ git commit
+[master 16a6a94] fileA add new text, fileB deleted, task1.1_answer add comand. Push №3.
+ 3 files changed, 20 insertions(+), 3 deletions(-)
+ delete mode 100644 fileB
+
+damager@damager-N56VB ~/myrepo $ git push origin
+Подсчет объектов: 8, готово.
+Delta compression using up to 8 threads.
+Сжатие объектов: 100% (5/5), готово.
+Запись объектов: 100% (8/8), 1.00 KiB | 0 bytes/s, готово.
+Total 8 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:Damager56rus/myrepo.git
+   20f2658..16a6a94  master -> master
+
+damager@damager-N56VB ~/myrepo $ cd /home/damager/cloned_myrepo
+
+damager@damager-N56VB ~/cloned_myrepo $ git add task1.1_answer
+
+damager@damager-N56VB ~/cloned_myrepo $ git commit
+[master 4403546] task1.1_answer changes in repository cloned_myrepo. Push №4.
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+damager@damager-N56VB ~/cloned_myrepo $ git log
+commit 4403546c9bf8cc9fce4a4d9952ee99ac64f44e64 (HEAD -> master)
+Author: Дмитрий Губачев <gubachev@reg.ru>
+Date:   Fri Aug 4 18:05:30 2017 +0400
+
+    task1.1_answer changes in repository cloned_myrepo. Push №4.
+
+commit cd9a6e50d7d8576340d8a5d41628298e07fd86ba
+Author: Дмитрий Губачев <gubachev@reg.ru>
+Date:   Fri Aug 4 17:18:11 2017 +0400
+
+    fileA and fileB changes. Push №2.
+
+commit 20f26580dd2988460458fd3b1ade48c50151cfac (origin/master, origin/HEAD)
+Author: Дмитрий Губачев <gubachev@reg.ru>
+Date:   Fri Aug 4 17:03:58 2017 +0400
+
+    task1.1_answer change. Push № 1.
+
+commit eca05e66173fcaeff436845e2af61d6e26cbe7ac
+Author: Damager56rus <30693383+Damager56rus@users.noreply.github.com>
+Date:   Fri Aug 4 16:17:16 2017 +0400
+
+    Create README.md
+
+damager@damager-N56VB ~/cloned_myrepo $ cd /home/damager/myrepo
+
+damager@damager-N56VB ~/myrepo $ git log
+commit 16a6a940dd4b8a77471b1589ea1a04092e332a26 (HEAD -> master, origin/master, origin/HEAD)
+Author: Дмитрий Губачев <gubachev@reg.ru>
+Date:   Fri Aug 4 18:01:18 2017 +0400
+
+    fileA add new text, fileB deleted, task1.1_answer add comand. Push №3.
+
+commit cd9a6e50d7d8576340d8a5d41628298e07fd86ba (cloned_myrepo/master)
+Author: Дмитрий Губачев <gubachev@reg.ru>
+Date:   Fri Aug 4 17:18:11 2017 +0400
+
+    fileA and fileB changes. Push №2.
+
+commit 20f26580dd2988460458fd3b1ade48c50151cfac
+Author: Дмитрий Губачев <gubachev@reg.ru>
+Date:   Fri Aug 4 17:03:58 2017 +0400
+
+    task1.1_answer change. Push № 1.
+
+commit eca05e66173fcaeff436845e2af61d6e26cbe7ac
+Author: Damager56rus <30693383+Damager56rus@users.noreply.github.com>
+Date:   Fri Aug 4 16:17:16 2017 +0400
+
+    Create README.md
+
+damager@damager-N56VB ~/cloned_myrepo $ cd /home/damager/myrepo
+
+damager@damager-N56VB ~/myrepo $ git fetch cloned_myrepo
+remote: Подсчет объектов: 3, готово.
+remote: Сжатие объектов: 100% (3/3), готово.
+remote: Total 3 (delta 2), reused 0 (delta 0)
+Распаковка объектов: 100% (3/3), готово.
+Из /home/damager/cloned_myrepo
+   cd9a6e5..4403546  master     -> cloned_myrepo/master
+
+damager@damager-N56VB ~/myrepo $ git merge cloned_myrepo/master
+Автослияние task1.1_answer
+КОНФЛИКТ (содержимое): Конфликт слияния в task1.1_answer
+Не удалось провести автоматическое слияние; исправьте конфликты и сделайте коммит результата.
+
+damager@damager-N56VB ~/myrepo $ git status
+На ветке master
+Ваша ветка обновлена в соответствии с «origin/master».
+У вас есть не слитые пути.
+  (разрешите конфликты, затем запустите «git commit»)
+  (используйте «git merge --abort», чтобы остановить операцию слияния)
+
+Не слитые пути:
+  (используйте «git add <файл>…», чтобы пометить разрешение конфликта)
+
+        оба измены:     task1.1_answer
+
+нет изменений добавленных для коммита
+(используйте «git add» и/или «git commit -a»)
+
+damager@damager-N56VB ~/myrepo $ git add task1.1_answer
+
+damager@damager-N56VB ~/myrepo $ git status
+На ветке master
+Ваша ветка обновлена в соответствии с «origin/master».
+Все конфликты исправлены, но вы все еще в процессе слияния.
+  (используйте «git commit», чтобы завершить слияние)
+
+Изменения, которые будут включены в коммит:
+
+        изменено:      task1.1_answer
+
+damager@damager-N56VB ~/myrepo $ git commit
+[master f134922] Merge remote-tracking branch 'cloned_myrepo/master' For invites task1.1_answer changes from myrepo and cloned_myrepo repositories. Push №5.
+
+damager@damager-N56VB ~/myrepo $ touch fileB
+
+damager@damager-N56VB ~/myrepo $ subl fileB
+
+damager@damager-N56VB ~/myrepo $ git add fileB
+
+damager@damager-N56VB ~/myrepo $ git commit
+[master 72bd4c3] fileB restored in first repository. Push №6.
+ 1 file changed, 1 insertion(+)
+ create mode 100644 fileB
+
+damager@damager-N56VB ~/myrepo $ git push origin
+Подсчет объектов: 8, готово.
+Delta compression using up to 8 threads.
+Сжатие объектов: 100% (8/8), готово.
+Запись объектов: 100% (8/8), 1.13 KiB | 0 bytes/s, готово.
+Total 8 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+To github.com:Damager56rus/myrepo.git
+   16a6a94..72bd4c3  master -> master
+
+damager@damager-N56VB ~/myrepo $ git fetch origin
+
+damager@damager-N56VB ~/myrepo $ git log
+commit 72bd4c34ce504ede49695b74a8934c4dffcba5e9 (HEAD -> master, origin/master, origin/HEAD)
+Author: Дмитрий Губачев <gubachev@reg.ru>
+Date:   Fri Aug 4 18:25:35 2017 +0400
+
+    fileB restored in first repository. Push №6.
+
+commit f1349223ac5eef7296d75565bade4dd66cc332ec
+Merge: 16a6a94 4403546
+Author: Дмитрий Губачев <gubachev@reg.ru>
+Date:   Fri Aug 4 18:20:37 2017 +0400
+
+    Merge remote-tracking branch 'cloned_myrepo/master'
+    For invites task1.1_answer changes from myrepo and cloned_myrepo repositories. Push №5.
+
+commit 4403546c9bf8cc9fce4a4d9952ee99ac64f44e64 (cloned_myrepo/master)
+Author: Дмитрий Губачев <gubachev@reg.ru>
+Date:   Fri Aug 4 18:05:30 2017 +0400
+
+    task1.1_answer changes in repository cloned_myrepo. Push №4.
+
+commit 16a6a940dd4b8a77471b1589ea1a04092e332a26
+Author: Дмитрий Губачев <gubachev@reg.ru>
+Date:   Fri Aug 4 18:01:18 2017 +0400
+
+    fileA add new text, fileB deleted, task1.1_answer add comand. Push №3.
+
+commit cd9a6e50d7d8576340d8a5d41628298e07fd86ba
+Author: Дмитрий Губачев <gubachev@reg.ru>
+Date:   Fri Aug 4 17:18:11 2017 +0400
+
+    fileA and fileB changes. Push №2.
+
+commit 20f26580dd2988460458fd3b1ade48c50151cfac
+Author: Дмитрий Губачев <gubachev@reg.ru>
+Date:   Fri Aug 4 17:03:58 2017 +0400
+
+    task1.1_answer change. Push № 1.
+
+commit eca05e66173fcaeff436845e2af61d6e26cbe7ac
+Author: Damager56rus <30693383+Damager56rus@users.noreply.github.com>
+Date:   Fri Aug 4 16:17:16 2017 +0400
+
+    Create README.md
+
+damager@damager-N56VB ~/myrepo $ cd /home/damager/cloned_myrepo
+
+damager@damager-N56VB ~/cloned_myrepo $ git fetch origin
+remote: Подсчет объектов: 9, готово.
+remote: Сжатие объектов: 100% (8/8), готово.
+remote: Total 9 (delta 4), reused 0 (delta 0)
+Распаковка объектов: 100% (9/9), готово.
+Из /home/damager/myrepo
+   20f2658..72bd4c3  master     -> origin/master
+
+damager@damager-N56VB ~/cloned_myrepo $ git merge origin/master
+Обновление 4403546..72bd4c3
+Fast-forward
+ fileA          |  3 ++-
+ task1.1_answer | 20 +++++++++++++++++++-
+ 2 files changed, 21 insertions(+), 2 deletions(-)
+
+damager@damager-N56VB ~/cloned_myrepo $ cd /home/damager/myrepo
+
+damager@damager-N56VB ~/myrepo $ git branch feature1
+
+damager@damager-N56VB ~/myrepo $ subl fileB
