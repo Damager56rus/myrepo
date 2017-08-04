@@ -77,6 +77,14 @@ damager@damager-N56VB ~/myrepo $ touch task1.1_answer
 
 damager@damager-N56VB ~/myrepo $ subl task1.1_answer
 
+<div id="footer">
+damager@damager-N56VB ~ $ cd cloned_myrepo
+
+damager@damager-N56VB ~/cloned_myrepo $ touch fileA fileB
+
+damager@damager-N56VB ~/cloned_myrepo $ subl fileA fileB
+
+damager@damager-N56VB ~/cloned_myrepo $ subl task1.1_answer
 
 damager@damager-N56VB ~/myrepo $ subl fileA
 
@@ -93,3 +101,4 @@ index a99f346..3b17b7b 100644
 \ No newline at end of file
 
 damager@damager-N56VB ~/myrepo $ git rm fileB
+</div>
