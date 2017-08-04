@@ -102,3 +102,18 @@ index a99f346..3b17b7b 100644
 
 damager@damager-N56VB ~/myrepo $ git rm fileB
 </div>
+
+damager@damager-N56VB ~/cloned_myrepo $ git checkout feature2
+Переключено на ветку «feature2»
+
+damager@damager-N56VB ~/cloned_myrepo $ git branch
+* feature2
+  master
+
+damager@damager-N56VB ~/cloned_myrepo $ git branch -a
+* feature2
+  master
+  remotes/github/master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/feature1
+  remotes/origin/master
