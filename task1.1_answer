@@ -316,7 +316,7 @@ damager@damager-N56VB ~/cloned_myrepo $ cd /home/damager/myrepo
 damager@damager-N56VB ~/myrepo $ git branch feature1
 
 damager@damager-N56VB ~/myrepo $ subl fileB
-=======
+
 damager@damager-N56VB ~/cloned_myrepo $ git checkout feature2
 Переключено на ветку «feature2»
 
@@ -333,3 +333,74 @@ damager@damager-N56VB ~/cloned_myrepo $ git branch -a
   remotes/origin/master
 remotes/origin/feature2
 </div>
+
+damager@damager-N56VB ~/cloned_myrepo $ git commit
+[feature2 b15b35b] task1.1_answer changes in feature2. Push №10.
+ 1 file changed, 15 insertions(+)
+
+damager@damager-N56VB ~/cloned_myrepo $ git push github                                                                                           
+Подсчет объектов: 3, готово.                                                                                                                      
+Delta compression using up to 8 threads.                                                                                                          
+Сжатие объектов: 100% (3/3), готово.                                                                                                              
+Запись объектов: 100% (3/3), 505 bytes | 0 bytes/s, готово.                                                                                       
+Total 3 (delta 2), reused 0 (delta 0)                                                                                                             
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:Damager56rus/myrepo.git                                                                                                             
+ * [new branch]      feature2 -> feature2  
+
+damager@damager-N56VB ~/myrepo $ git fetch origin
+remote: Counting objects: 6, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 6 (delta 4), reused 6 (delta 4), pack-reused 0
+Распаковка объектов: 100% (6/6), готово.
+Из github.com:Damager56rus/myrepo
+ * [новая ветка]     feature2   -> origin/feature2
+   a38db01..868dd2a  master     -> origin/master
+
+damager@damager-N56VB ~/myrepo $ git merge origin/master
+Обновление 3bccde6..868dd2a
+Fast-forward
+ task1.1_answer | 19 ++++++++++++++++++-
+ 1 file changed, 18 insertions(+), 1 deletion(-)
+
+damager@damager-N56VB ~/myrepo $ git checkout master
+
+damager@damager-N56VB ~/myrepo $ git branch -a
+  feature1
+* master
+  remotes/cloned_myrepo/master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/feature1
+  remotes/origin/feature2
+  remotes/origin/master
+
+damager@damager-N56VB ~/myrepo $ git merge remotes/origin/feature2
+Автослияние task1.1_answer
+КОНФЛИКТ (содержимое): Конфликт слияния в task1.1_answer                                                                                          
+Не удалось провести автоматическое слияние; исправьте конфликты и сделайте коммит результата.
+
+damager@damager-N56VB ~/myrepo $ git log --pretty=format:"%h %s" --graph
+*   c404bde Merge remote-tracking branch 'remotes/origin/feature2' Add cjanges task1.1_answer. Push №11.
+|\  
+| * b15b35b task1.1_answer changes in feature2. Push №10.
+* | a38db01 Add branch feature1, fileB and task1.1_answer changed in first repository. Push №7.
+|/  
+* 72bd4c3 fileB restored in first repository. Push №6.
+*   f134922 Merge remote-tracking branch 'cloned_myrepo/master' For invites task1.1_answer changes from myrepo and cloned_myrepo repositories. Push №5.
+|\  
+| * 4403546 task1.1_answer changes in repository cloned_myrepo. Push №4.
+* | 16a6a94 fileA add new text, fileB deleted, task1.1_answer add comand. Push №3.
+|/  
+* cd9a6e5 fileA and fileB changes. Push №2.
+* 20f2658 task1.1_answer change. Push № 1.
+* eca05e6 Create README.md
+
+damager@damager-N56VB ~/myrepo $ git push origin --delete feature1
+To github.com:Damager56rus/myrepo.git
+ - [deleted]         feature1
+
+damager@damager-N56VB ~/myrepo $ git branch -D feature1
+Ветка feature1 удалена (была 868dd2a).
+
+damager@damager-N56VB ~/myrepo $ git branch
+* master
