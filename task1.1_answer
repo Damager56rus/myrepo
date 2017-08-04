@@ -103,6 +103,7 @@ index a99f346..3b17b7b 100644
 damager@damager-N56VB ~/myrepo $ git rm fileB
 </div>
 
+<div id="footer">
 damager@damager-N56VB ~/myrepo $ git add fileA task1.1_answer
 
 damager@damager-N56VB ~/myrepo $ git commit
@@ -315,3 +316,20 @@ damager@damager-N56VB ~/cloned_myrepo $ cd /home/damager/myrepo
 damager@damager-N56VB ~/myrepo $ git branch feature1
 
 damager@damager-N56VB ~/myrepo $ subl fileB
+=======
+damager@damager-N56VB ~/cloned_myrepo $ git checkout feature2
+Переключено на ветку «feature2»
+
+damager@damager-N56VB ~/cloned_myrepo $ git branch
+* feature2
+  master
+
+damager@damager-N56VB ~/cloned_myrepo $ git branch -a
+* feature2
+  master
+  remotes/github/master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/feature1
+  remotes/origin/master
+remotes/origin/feature2
+</div>
