@@ -1,0 +1,78 @@
+damager@damager-N56VB ~ $ git config --global user.name "Дмитрий Губачев"
+
+damager@damager-N56VB ~ $ git config --global user.email gubachev@reg.ru
+
+damager@damager-N56VB ~ $ git config --list
+user.name=Дмитрий Губачев
+user.email=gubachev@reg.ru
+core.autocrlf=false
+core.safecrlf=false
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=https://github.com/Damager56rus/myrepo.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.master.remote=origin
+branch.master.merge=refs/heads/master
+
+damager@damager-N56VB ~ $ git clone git@github.com:Damager56rus/myrepo.git
+Клонирование в «myrepo»…
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Получение объектов: 100% (3/3), готово.
+
+damager@damager-N56VB ~ $ cd myrepo
+
+damager@damager-N56VB ~/myrepo $ touch task1.1
+
+damager@damager-N56VB ~/myrepo $ subl tsak1.1
+
+damager@damager-N56VB ~/myrepo $ git status
+На ветке master
+Ваша ветка обновлена в соответствии с «origin/master».
+Неотслеживаемые файлы:
+  (используйте «git add <файл>…», чтобы добавить в то, что будет включено в коммит)
+
+        task1.1
+
+ничего не добавлено в коммит, но есть неотслеживаемые файлы (используйте «git add», чтобы отслеживать их)
+
+damager@damager-N56VB ~/myrepo $ touch .gitignore
+
+damager@damager-N56VB ~/myrepo $ subl .gitignore
+
+damager@damager-N56VB ~/myrepo $ git status
+На ветке master
+Ваша ветка обновлена в соответствии с «origin/master».
+Неотслеживаемые файлы:
+  (используйте «git add <файл>…», чтобы добавить в то, что будет включено в коммит)
+
+        .gitignore
+
+ничего не добавлено в коммит, но есть неотслеживаемые файлы (используйте «git add», чтобы отслеживать их)
+
+damager@damager-N56VB ~/myrepo $ touch .gitignore
+
+damager@damager-N56VB ~/myrepo $ subl .gitignore
+
+damager@damager-N56VB ~/myrepo $ git status
+На ветке master
+Ваша ветка обновлена в соответствии с «origin/master».
+Неотслеживаемые файлы:
+  (используйте «git add <файл>…», чтобы добавить в то, что будет включено в коммит)
+
+        .gitignore
+
+ничего не добавлено в коммит, но есть неотслеживаемые файлы (используйте «git add», чтобы отслеживать их)
+
+damager@damager-N56VB ~/myrepo $ subl .gitignore
+
+damager@damager-N56VB ~/myrepo $ git status
+На ветке master
+Ваша ветка обновлена в соответствии с «origin/master».
+нечего коммитить, нет изменений в рабочем каталоге
+
+damager@damager-N56VB ~/myrepo $ touch task1.1_answer
+
+damager@damager-N56VB ~/myrepo $ subl task1.1_answer
