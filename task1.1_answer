@@ -312,6 +312,8 @@ Fast-forward
 
 damager@damager-N56VB ~/cloned_myrepo $ cd /home/damager/myrepo
 
-damager@damager-N56VB ~/myrepo $ git branch feature1
+damager@damager-N56VB ~/myrepo $ git checkout -b feature1
 
 damager@damager-N56VB ~/myrepo $ subl fileB
+
+damager@damager-N56VB ~/myrepo $ subl task1.1_answer
