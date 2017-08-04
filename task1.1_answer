@@ -313,10 +313,11 @@ Fast-forward
 
 damager@damager-N56VB ~/cloned_myrepo $ cd /home/damager/myrepo
 
-damager@damager-N56VB ~/myrepo $ git branch feature1
+damager@damager-N56VB ~/myrepo $ git checkout -b feature1
 
 damager@damager-N56VB ~/myrepo $ subl fileB
 
+<div id="footer">
 damager@damager-N56VB ~/cloned_myrepo $ git checkout feature2
 Переключено на ветку «feature2»
 
@@ -404,3 +405,4 @@ damager@damager-N56VB ~/myrepo $ git branch -D feature1
 
 damager@damager-N56VB ~/myrepo $ git branch
 * master
+</div>
