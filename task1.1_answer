@@ -317,3 +317,20 @@ damager@damager-N56VB ~/myrepo $ git checkout -b feature1
 damager@damager-N56VB ~/myrepo $ subl fileB
 
 damager@damager-N56VB ~/myrepo $ subl task1.1_answer
+
+damager@damager-N56VB ~/myrepo $ cd /home/damager/cloned_myrepo
+
+damager@damager-N56VB ~/cloned_myrepo $ git fetch origin
+remote: Подсчет объектов: 4, готово.
+remote: Сжатие объектов: 100% (3/3), готово.
+remote: Total 4 (delta 1), reused 0 (delta 0)
+Распаковка объектов: 100% (4/4), готово.
+Из /home/damager/myrepo
+   72bd4c3..3bccde6  feature1   -> origin/feature1
+
+damager@damager-N56VB ~/cloned_myrepo $ git merge origin/feature1
+Обновление a38db01..3bccde6
+Fast-forward
+ fileB          | 2 +-
+ task1.1_answer | 6 ++++--
+ 2 files changed, 5 insertions(+), 3 deletions(-)
