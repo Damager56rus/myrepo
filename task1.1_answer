@@ -76,3 +76,11 @@ damager@damager-N56VB ~/myrepo $ git status
 damager@damager-N56VB ~/myrepo $ touch task1.1_answer
 
 damager@damager-N56VB ~/myrepo $ subl task1.1_answer
+
+damager@damager-N56VB ~ $ cd cloned_myrepo
+
+damager@damager-N56VB ~/cloned_myrepo $ touch fileA fileB
+
+damager@damager-N56VB ~/cloned_myrepo $ subl fileA fileB
+
+damager@damager-N56VB ~/cloned_myrepo $ subl task1.1_answer
