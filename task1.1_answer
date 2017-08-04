@@ -76,3 +76,20 @@ damager@damager-N56VB ~/myrepo $ git status
 damager@damager-N56VB ~/myrepo $ touch task1.1_answer
 
 damager@damager-N56VB ~/myrepo $ subl task1.1_answer
+
+
+damager@damager-N56VB ~/myrepo $ subl fileA
+
+damager@damager-N56VB ~/myrepo $ git diff fileA
+diff --git a/fileA b/fileA
+index a99f346..3b17b7b 100644
+--- a/fileA
++++ b/fileA
+@@ -1 +1,2 @@
+-Some text in fileA.
+\ No newline at end of file
++Some text in fileA.
++Some new text in fileA.
+\ No newline at end of file
+
+damager@damager-N56VB ~/myrepo $ git rm fileB
